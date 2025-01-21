@@ -1,0 +1,14 @@
+{% extends 'learning_logs/base.html' %}
+
+{% block content %}
+    Topicos:
+    <ul>
+        {% for topic in topics %}
+            <li>{{ topic }}</li>  <!--percorre todo o objeto que colocamos lá em context-->
+        {% empty %}
+            <li>Não há tópicos adicionados</li>
+        {% endfor %}
+
+    </ul>
+
+{% endblock content %}
