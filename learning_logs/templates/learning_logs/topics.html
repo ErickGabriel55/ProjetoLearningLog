@@ -4,7 +4,9 @@
     Topicos:
     <ul>
         {% for topic in topics %}
-            <li>{{ topic }}</li>  <!--percorre todo o objeto que colocamos lá em context-->
+            <li>
+                <a href="{% url 'topic' topic.id %}">{{ topic }}</a>
+            </li>  <!--percorre todo o objeto que colocamos lá em context-->
         {% empty %}
             <li>Não há tópicos adicionados</li>
         {% endfor %}
