@@ -19,6 +19,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('learning_logs.urls')),
-
+    path('', include('learning_logs.urls')), # faz uma rota para a página inicial pois não tem nada dentro das aspas ''
+    
 ]

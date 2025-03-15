@@ -1,4 +1,5 @@
 <a href="{% url 'index' %}">{% block title_page %}Learning Log{% endblock title_page %}</a> -
-<a href="{% url 'topics' %}">Tópicos</a>
+<!--Estrutura da tag de template url é {% url 'nome_da_url' %} as chaves indicam que os códigos digitados nesse html serão referentes a python/django. O nome é usado lá no urls do app-->
+<a href="{% url 'topics' %}">Tópicos</a> 
 
-{% block content %}loucura{% endblock content %}
+{% block content %}loucura{% endblock content %} <!--Estrutura da tag de template block block: {% block/endblock nome_do_bloco %}-->
