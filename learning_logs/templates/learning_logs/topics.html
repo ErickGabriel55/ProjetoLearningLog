@@ -3,13 +3,13 @@
 {% block content %}
     Topicos:
     <ul>
-        {% for topic in topics %}
+        {% for topic in topics %} <!--Começa o for-->
             <li>
-                <a href="{% url 'topic' topic.id %}">{{ topic }}</a>
+                <a href="{% url 'topic' topic.id %}">{{ topic }}</a> <!--Quando tem chaves uma dentro da outra {{variavel}} é a sintaxe que o django usa para ler variáveis.-->
             </li>  <!--percorre todo o objeto que colocamos lá em context-->
-        {% empty %}
+        {% empty %} <!-- O empty indica que quando estiver vazio irá acontecer outra coisa -->
             <li>Não há tópicos adicionados</li>
-        {% endfor %}
+        {% endfor %} <!--Encerra o for-->
 
     </ul>
 

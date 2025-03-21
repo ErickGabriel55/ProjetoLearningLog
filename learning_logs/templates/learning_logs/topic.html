@@ -2,13 +2,13 @@
 
 {% block content %}
 
-    <h3>Tópico: {{ topic }}</h3>
+    <h3>Tópico: {{ topic }}</h3> <!--Quando tem chaves uma dentro da outra {{variavel}} é a sintaxe que o django usa para ler variáveis.-->
     <p>Entradas: </p>
     <ul>
-        {% for entry in entries %}
+        {% for entry in entries %} <!--Começa o for-->
         
         <li>
-            <p>{{ entry.date_added | date:'M d, Y H:i'}}</p>
+            <p>{{ entry.date_added | date:'M d, Y H:i'}}</p> <!--O pipeline "|" adiciona um filtro na informação que o django está trazendo-->
             <p>{{ entry.text | linebreaks}}</p>
         </li>
         {% empty %}
@@ -16,7 +16,7 @@
             Não há registro.
         </li>
         
-        {% endfor %}
+        {% endfor %} <!--Encerra o for-->
     </ul>
 
 {% endblock content %}
